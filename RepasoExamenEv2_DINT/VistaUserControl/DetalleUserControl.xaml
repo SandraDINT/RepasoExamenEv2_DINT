@@ -10,6 +10,7 @@
     <UserControl.Resources>
         <local1:ImageConverter x:Key="ConverterImagen"></local1:ImageConverter>
     </UserControl.Resources>
+    <!--Prueba para git (ELIMINAR DESPUÉS / EN CLASE)-->
     <StackPanel>
         <TextBlock Text="{Binding Path=ComponenteActual.Nombre}"
                    HorizontalAlignment="Center"
