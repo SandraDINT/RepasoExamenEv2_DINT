@@ -21,7 +21,8 @@
             <Button Content="Consultar"
                     Width="100"
                     DockPanel.Dock="Bottom"
-                    Margin="10"/>
+                    Margin="10"
+                    Command="{Binding Path=AbrirDetalleCommand}"/>
             <ListBox Margin="10"
                      ItemsSource="{Binding Path=ListaComponentes}"
                      SelectedItem="{Binding Path=ComponenteActual}"
@@ -38,20 +39,27 @@
                                 Width="230">
                             <StackPanel HorizontalAlignment="Center"
                                         Margin="5">
-                                <TextBlock Text="{Binding Path=Nombre}" 
+                                <TextBlock Text="{Binding Path=Nombre}"
                                            FontWeight="Bold"
                                            FontSize="20"
                                            TextTrimming="WordEllipsis"
-                                           Margin="0,0,0,5"/>
+                                           Margin="0,0,0,5" />
                                 <Image Source="{Binding Path=Tipo, Converter={StaticResource ConverterImagen}}"
-                                       Width="100" 
-                                       Margin="0,5,0,0"/>
+                                       Width="100"
+                                       Margin="0,5,0,0" />
                             </StackPanel>
                         </Border>
-                        
+
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
+        <StackPanel Grid.Column="1">
+            <Image Source="Assets/info.png"
+                   Width="50"
+                   HorizontalAlignment="Right"
+                   Margin="10"/>
+            <ContentControl Content="{Binding Path=ContenidoVentana}"/>
+        </StackPanel>
     </Grid>
 </Window>

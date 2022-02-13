@@ -4,16 +4,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RepasoExamenEv2_DINT.VistaUserControl"
+             xmlns:local1="clr-namespace:RepasoExamenEv2_DINT.Convertidor"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local1:ImageConverter x:Key="ConverterImagen"></local1:ImageConverter>
+    </UserControl.Resources>
     <StackPanel>
-        <TextBlock Text="Nombre hardware"
+        <TextBlock Text="{Binding Path=ComponenteActual.Nombre}"
                    HorizontalAlignment="Center"
                    Margin="10"/>
-        <Image Source="/Assets/placa.png"
+        <Image Source="{Binding Path=ComponenteActual.Imagen}"
                Width="150"
                Margin="10"/>
-        <TextBlock Text="Precio"
+        <TextBlock Text="{Binding Path=ComponenteActual.precio}"
                    HorizontalAlignment="Center"
                    Margin="10"
                    FontWeight="Bold"/>

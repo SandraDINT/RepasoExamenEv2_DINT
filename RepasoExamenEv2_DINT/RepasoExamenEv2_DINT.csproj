@@ -86,6 +86,7 @@
     <Compile Include="Convertidor\ImageConverter.cs" />
     <Compile Include="Servicios\ListaComponentesService.cs" />
     <Compile Include="Servicios\NavigationService.cs" />
+    <Compile Include="VistaUserControl\DetalleComponenteVM.cs" />
     <Compile Include="VistaUserControl\DetalleUserControl.xaml.cs">
       <DependentUpon>DetalleUserControl.xaml</DependentUpon>
     </Compile>

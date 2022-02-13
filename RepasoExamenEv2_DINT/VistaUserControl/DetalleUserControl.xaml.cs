@@ -20,9 +20,12 @@ namespace RepasoExamenEv2_DINT.VistaUserControl
     /// </summary>
     public partial class DetalleUserControl : UserControl
     {
+        DetalleComponenteVM vm;
         public DetalleUserControl()
         {
             InitializeComponent();
+            vm = new DetalleComponenteVM();
+            //this.DataContext = vm;
         }
     }
 }

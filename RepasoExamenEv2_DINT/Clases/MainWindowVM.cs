@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 using RepasoExamenEv2_DINT.Servicios;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace RepasoExamenEv2_DINT.Clases
 {
@@ -13,6 +15,11 @@ namespace RepasoExamenEv2_DINT.Clases
     {
         //Servicios
         ListaComponentesService componentesService;
+        NavigationService navigationService;
+
+        //Comandos
+        public RelayCommand AbrirDetalleCommand { get; }
+
 
         //Variables
         private ObservableCollection<Componente> _listaComponentes;
@@ -27,15 +34,30 @@ namespace RepasoExamenEv2_DINT.Clases
             get { return _componenteActual; }
             set { SetProperty(ref _componenteActual, value); }
         }
-
+        private UserControl _contenidoVentana;
+        public UserControl ContenidoVentana
+        {
+            get { return _contenidoVentana; }
+            set { SetProperty(ref _contenidoVentana, value); }
+        }
 
         public MainWindowVM()
         {
             //Servicios
             componentesService = new ListaComponentesService();
+            navigationService = new NavigationService();
+
+            //Comandos
+            AbrirDetalleCommand = new RelayCommand(AbrirDetalle);
+
 
             //Variables
             _listaComponentes = componentesService.GetComponentes();
+        }
+
+        private void AbrirDetalle()
+        {
+            ContenidoVentana = navigationService.AbrirDetalleComponentes();
         }
     }
 }
