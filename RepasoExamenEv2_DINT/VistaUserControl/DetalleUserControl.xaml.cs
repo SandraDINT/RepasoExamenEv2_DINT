@@ -25,7 +25,7 @@ namespace RepasoExamenEv2_DINT.VistaUserControl
         {
             InitializeComponent();
             vm = new DetalleComponenteVM();
-            //this.DataContext = vm;
+            this.DataContext = vm;
         }
     }
 }

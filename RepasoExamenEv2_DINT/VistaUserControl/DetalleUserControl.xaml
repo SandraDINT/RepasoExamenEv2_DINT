@@ -10,7 +10,6 @@
     <UserControl.Resources>
         <local1:ImageConverter x:Key="ConverterImagen"></local1:ImageConverter>
     </UserControl.Resources>
-    <!--Prueba para git (ELIMINAR DESPUÉS / EN CLASE)-->
     <StackPanel>
         <TextBlock Text="{Binding Path=ComponenteActual.Nombre}"
                    HorizontalAlignment="Center"
@@ -18,7 +17,7 @@
         <Image Source="{Binding Path=ComponenteActual.Imagen}"
                Width="150"
                Margin="10"/>
-        <TextBlock Text="{Binding Path=ComponenteActual.precio}"
+        <TextBlock Text="{Binding Path=ComponenteActual.Precio}"
                    HorizontalAlignment="Center"
                    Margin="10"
                    FontWeight="Bold"/>
