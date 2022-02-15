@@ -84,6 +84,7 @@
     <Compile Include="Clases\Componente.cs" />
     <Compile Include="Clases\MainWindowVM.cs" />
     <Compile Include="Convertidor\ImageConverter.cs" />
+    <Compile Include="Clases\Mensajes.cs" />
     <Compile Include="Servicios\ListaComponentesService.cs" />
     <Compile Include="Servicios\NavigationService.cs" />
     <Compile Include="VistaUserControl\DetalleComponenteVM.cs" />

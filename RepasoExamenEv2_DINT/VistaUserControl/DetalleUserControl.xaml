@@ -11,13 +11,13 @@
         <local1:ImageConverter x:Key="ConverterImagen"></local1:ImageConverter>
     </UserControl.Resources>
     <StackPanel>
-        <TextBlock Text="{Binding Path=ComponenteActual.Nombre}"
+        <TextBlock Text="{Binding Path=ComponenteSeleccionado.Nombre}"
                    HorizontalAlignment="Center"
                    Margin="10"/>
-        <Image Source="{Binding Path=ComponenteActual.Imagen}"
+        <Image Source="{Binding Path=ComponenteSeleccionado.Imagen}"
                Width="150"
                Margin="10"/>
-        <TextBlock Text="{Binding Path=ComponenteActual.Precio}"
+        <TextBlock Text="{Binding Path=ComponenteSeleccionado.Precio}"
                    HorizontalAlignment="Center"
                    Margin="10"
                    FontWeight="Bold"/>

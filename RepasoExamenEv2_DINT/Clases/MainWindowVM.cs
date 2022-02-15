@@ -1,5 +1,6 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Input;
+using Microsoft.Toolkit.Mvvm.Messaging;
 using RepasoExamenEv2_DINT.Servicios;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,6 @@ namespace RepasoExamenEv2_DINT.Clases
 
         //Comandos
         public RelayCommand AbrirDetalleCommand { get; }
-
 
         //Variables
         private ObservableCollection<Componente> _listaComponentes;
@@ -53,8 +53,20 @@ namespace RepasoExamenEv2_DINT.Clases
 
             //Variables
             _listaComponentes = componentesService.GetComponentes();
+
+            //Mensajes
+            RegistrarMensajePasarDetalle();
         }
 
+        //Mensajes
+        private void RegistrarMensajePasarDetalle()
+        {
+            WeakReferenceMessenger.Default.Register<MainWindowVM, MensajeDetalleComponente>(this, (r, m) =>
+            {
+                if (!m.HasReceivedResponse)
+                    m.Reply(r.ComponenteActual);
+            });
+        }
         private void AbrirDetalle()
         {
             ContenidoVentana = navigationService.AbrirDetalleComponentes();
