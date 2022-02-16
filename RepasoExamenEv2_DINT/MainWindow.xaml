@@ -55,10 +55,13 @@
             </ListBox>
         </DockPanel>
         <StackPanel Grid.Column="1">
-            <Image Source="Assets/info.png"
-                   Width="50"
-                   HorizontalAlignment="Right"
-                   Margin="10"/>
+            <Button HorizontalAlignment="Right"
+                    Template="{DynamicResource ButtonControlTemplate1}"
+                    Command="{Binding Path=AbrirDialogoCommand}"
+                    Margin="10"
+                    Width="50">
+                <Image Source="Assets/info.png"/>
+            </Button>
             <ContentControl Content="{Binding Path=ContenidoVentana}"/>
         </StackPanel>
     </Grid>

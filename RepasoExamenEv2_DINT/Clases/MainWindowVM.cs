@@ -20,6 +20,7 @@ namespace RepasoExamenEv2_DINT.Clases
 
         //Comandos
         public RelayCommand AbrirDetalleCommand { get; }
+        public RelayCommand AbrirDialogoCommand { get; }
 
         //Variables
         private ObservableCollection<Componente> _listaComponentes;
@@ -49,13 +50,18 @@ namespace RepasoExamenEv2_DINT.Clases
 
             //Comandos
             AbrirDetalleCommand = new RelayCommand(AbrirDetalle);
-
+            AbrirDialogoCommand = new RelayCommand(AbrirDialogo);
 
             //Variables
             _listaComponentes = componentesService.GetComponentes();
 
             //Mensajes
             RegistrarMensajePasarDetalle();
+        }
+
+        private void AbrirDialogo()
+        {
+            navigationService.AbrirDialogoInfo();
         }
 
         //Mensajes

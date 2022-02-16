@@ -85,12 +85,20 @@
     <Compile Include="Clases\MainWindowVM.cs" />
     <Compile Include="Convertidor\ImageConverter.cs" />
     <Compile Include="Clases\Mensajes.cs" />
+    <Compile Include="Dialogo\DialogoInfo.xaml.cs">
+      <DependentUpon>DialogoInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogo\DialogoInfoVM.cs" />
     <Compile Include="Servicios\ListaComponentesService.cs" />
     <Compile Include="Servicios\NavigationService.cs" />
     <Compile Include="VistaUserControl\DetalleComponenteVM.cs" />
     <Compile Include="VistaUserControl\DetalleUserControl.xaml.cs">
       <DependentUpon>DetalleUserControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dialogo\DialogoInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

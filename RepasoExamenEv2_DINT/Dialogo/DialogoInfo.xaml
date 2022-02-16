@@ -1,0 +1,33 @@
+﻿<Window x:Class="RepasoExamenEv2_DINT.Dialogo.DialogoInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RepasoExamenEv2_DINT.Dialogo"
+        mc:Ignorable="d"
+        Title="DialogoInfo" Height="300" Width="650"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize">
+    <DockPanel>
+        <TextBlock Text="Componentes"
+                   DockPanel.Dock="Top"
+                   HorizontalAlignment="Center"
+                   FontSize="40"
+                   FontWeight="Bold"/>
+        <Button Content="Cerrar"
+                x:Name="buttonCerrar"
+                DockPanel.Dock="Bottom"
+                Margin="10"
+                IsDefault="True"
+                Click="buttonCerrar_Click"/>
+        <StackPanel>
+            <TextBlock Text="Autor: Sandra Hurtado"
+                       FontWeight="Bold"
+                       Margin="10" />
+            <TextBlock Text="Versión: 1.0.0"
+                       FontWeight="Bold"
+                       Margin="10" />
+        </StackPanel>
+        
+    </DockPanel>
+</Window>
